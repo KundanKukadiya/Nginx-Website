@@ -1,0 +1,7 @@
+--------------- Create conf.d file for new server block --------------
+
+
+
+
+
+--------------- Create password based authtication on server block ------------------
