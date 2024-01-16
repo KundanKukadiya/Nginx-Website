@@ -1,7 +1,48 @@
 --------------- Create conf.d file for new server block --------------
+server {
 
+  listen 80 default_server;
+  root /var/www;
+
+  server_name _;
+
+
+  index index.html index.htm;
+
+  location / {
+        auth_basic off ;
+        try_files $uri $uri/ =404;
+  }
+
+   location /dev {    
+        try_files $uri $uri/ =404;
+
+  }
+}
 
 
 
 
 --------------- Create password based authtication on server block ------------------
+server {
+
+  listen 80 default_server;
+  root /var/www;
+
+  server_name _;
+  auth_basic "Under dev portal" ;
+  auth_basic_user_file /etc/nginx/.htpasswd;
+
+
+  index index.html index.htm;
+
+  location / {
+        auth_basic off ;
+        try_files $uri $uri/ =404;
+  }
+
+   location /dev {    
+        try_files $uri $uri/ =404;
+
+  }
+}
