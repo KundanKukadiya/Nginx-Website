@@ -47,7 +47,15 @@ cd /etc/nginx/nginx.conf
 > Client <-> proxy <-> Server
 > 2 type
   1. Forward Proxy (if proxy from client side it's called forward proxy)
-  2. Reverse Proxy (if proxy from Server side it's called reverse proxy)
+     - protects the client's online identity.
+     - IP address of client is hidden, only the IP address of the forward proxy is visible to the servers.
+     - bypasses browsing restrictions and blocks access to certain content.
+  3. Reverse Proxy (if proxy from Server side it's called reverse proxy)
+     - sit between internet and web-server.
+     - protects a web sites , hard to target website for DDos attack.
+     - use as load balacing and distribute the load to multiple servers.
+     - also use for caching
+     - handles SSL encryptions
 
 ### Reverse Proxy
 > A proxy service which takes a client request, Passes it on to one or more servers.
