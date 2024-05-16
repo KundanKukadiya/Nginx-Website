@@ -8,23 +8,29 @@
 
 3. **204 No Content:** The request was successful, but there is no additional data to send in the response. This code is often used in response to DELETE requests.
 
-4. **400 Bad Request:** The server cannot understand the request due to a client error, malformed syntax, or invalid parameters.
+4. **301 (Permanent Redirect):** The HTTP status code 301 means that the page you have requested has moved to a new URL and which is permanent. In the future, whenever the user requests the same website, it will be redirected to the new URL. The modified permanent URL is given by the location filed in response.
+ 
+5. **302 (Temporary Redirect)** The requested URL has been redirected to another website which is temporary. Major changes in the URL will be in the future. Other than GET or HEAD, if the 302 is received in response to a request. The redirection is temporarily redirected to another website.
 
-5. **401 Unauthorized:** The client lacks valid credentials to access the requested data or perform the desired action.
+6. **304 (Not Modified)** HTTP status code 304 is used for caching purposes. The response has not been changed so that in the future the client can resume the same cache. If there’s a GET request and access is allowed, but the document has not been modified. The response MUST NOT contain a message-body and therefore comes to an end by the first empty line. 
 
-6. **403 Forbidden:** The client does not have permission to access the requested resource, even with valid authentication credentials.
+7. **400 Bad Request:** The server cannot understand the request due to a client error, malformed syntax, or invalid parameters.
 
-7. **404 Not Found:** The server cannot find the requested resource or endpoint.
+8. **401 Unauthorized:** The client lacks valid credentials to access the requested data or perform the desired action.
 
-8. **405 Method Not Allowed:** The requested HTTP method is not supported for the specified resource.
+9. **403 Forbidden:** The client does not have permission to access the requested resource, even with valid authentication credentials.
 
-9. **500 Internal Server Error:** The server encountered an unexpected issue.
+10. **404 Not Found:** The server cannot find the requested resource or endpoint.
 
-10. **502 Bad Gateway:** The server acting as a gateway or proxy received an invalid response from an upstream server.
+11. **405 Method Not Allowed:** The requested HTTP method is not supported for the specified resource.
 
-11. **503 Service Unavailable:** The server is not ready to handle the request, often due to overload or maintenance.
+12. **500 Internal Server Error:** is a common error message that occurs when the server meets an unexpected situation and it doesn’t know how to handle it.
 
-12. **504 Gateway Timeout:** The server acting as a gateway or proxy did not receive a timely response from the upstream server.
+13. **502 Bad Gateway:** The server acting as a gateway or proxy received an invalid response from an upstream server. 
+
+14. **503 Service Unavailable:** The server is not ready to handle the request, often due to overload or maintenance. when the server is unable to handle the requests (the server is temporarily overloading or down).
+
+15. **504 Gateway Timeout:** The server acting as a gateway or proxy did not receive a timely response from the upstream server.
 
 ## The four primary HTTP request methods in REST:
 
